@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Filtering App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f0f4f8;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            text-align: center;
+            color: #0066cc;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        label {
+            text-align: center;
+            font-size: 1rem;
+            font-weight: bold;
+            color: #555;
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        select,
+        button {
+            width: 100%;
+            max-width: 300px;
+            margin: 10px auto;
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+            display: block;
+        }
+
+        select:focus,
+        button:focus {
+            border-color: #0066cc;
+            box-shadow: 0 0 5px rgba(0, 102, 204, 0.5);
+        }
+
+        button {
+            background-color: #0066cc;
+            color: #fff;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: #005bb5;
+        }
+
+        button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+
+        .result {
+            margin-top: 20px;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .result h3 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        .result div {
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+            color: #555;
+        }
+
+        .result strong {
+            color: #0066cc;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+
+            select,
+            button {
+                max-width: 100%;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Mobile Filtering App</h1>
+    <label for="brand">Select Brand:</label>
+    <select id="brand">
+        <option value="">Select a Brand</option>
+    </select>
+    <label for="model">Select Model:</label>
+    <select id="model" disabled>
+        <option value="">Select a Model</option>
+    </select>
+    <button id="search" disabled>Search</button>
+
+    <div id="output" class="result" style="display: none;"></div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
